@@ -1,0 +1,15 @@
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.deps.json
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.runtimeconfig.json
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.runtimeconfig.dev.json
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.dll
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ref\ElenSoft.DataLayer.dll
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.pdb
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.csprojAssemblyReference.cache
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.AssemblyInfoInputs.cache
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.AssemblyInfo.cs
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.dll
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ref\ElenSoft.DataLayer.dll
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.pdb
+C:\Users\rmyt\source\repos\ASP\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.genruntimeconfig.cache
