@@ -28,22 +28,10 @@ namespace ElenSoft.DataLayer.Models.Context
         //}
         public DbSet<ApplicationRole> ApplicationRoles { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        //public DbSet<ApplicationUserRole> ApplicationUserRoles { get; set; }
-
-
-        //public DbSet<Department> Departments { get; set; }
-        //public DbSet<Equipment> Equipment { get; set; }
-        //public DbSet<EquipmentBrand> EquipmentBrands { get; set; }
-        //public DbSet<EquipmentPlace> EquipmentPlaces { get; set; }
-        //public DbSet<EquipmentType> EquipmentTypes { get; set; }
-        //public DbSet<Offish> Offishes { get; set; }
-        //public DbSet<OffishAction> OffishActions { get; set; }
-        //public DbSet<OffishCategory> OffishCategories { get; set; }
-        //public DbSet<OffishUser>   OffishUsers { get; set; }
-
-        //public DbSet<OffishDescription> OffishDescriptions { get; set; }
-        //public DbSet<OffishTemplate> OffishTemplates { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Tage> Tages{ get; set; }
+        public DbSet<Archive> Archives{ get; set; }
 
 
 

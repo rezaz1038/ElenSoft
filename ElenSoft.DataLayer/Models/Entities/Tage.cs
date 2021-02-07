@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ElenSoft.DataLayer.Models.Entities
 {
-    public class Tage : TEntity
+    public class Tage: TEntity
     {
         public string Title { get; set; }
-        
-      
+
+        public ICollection<Archive>   Archives { get; set; }
+
     }
 }
