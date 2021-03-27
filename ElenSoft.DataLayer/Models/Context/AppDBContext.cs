@@ -30,10 +30,17 @@ namespace ElenSoft.DataLayer.Models.Context
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Tage> Tages{ get; set; }
-        public DbSet<Archive> Archives{ get; set; }
+        public DbSet<Tage> Tages { get; set; }
+        public DbSet<Archive> Archives { get; set; }
+
+        public DbSet<FolderInfo> FolderInfos { get; set; }
+        public DbSet<FolderSecurity> FolderSecurities { get; set; }
 
 
-
+        public DbSet<Equipment> Equipment { get; set; }
+        public DbSet<EquipmentPlace> EquipmentPlaces { get; set; }
+        public DbSet<Device> Devices { get; set; }
+        public DbSet<DeviceBrand> DeviceBrands { get; set; }
+        public DbSet<DeviceType> DeviceTypes { get; set; }
     }
 }

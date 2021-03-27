@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Application\\ElenSoft.Application.csproj": {}
+    "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Application\\ElenSoft.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Application\\ElenSoft.Application.csproj": {
+    "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Application\\ElenSoft.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Application\\ElenSoft.Application.csproj",
+        "projectUniqueName": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Application\\ElenSoft.Application.csproj",
         "projectName": "ElenSoft.Application",
-        "projectPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Application\\ElenSoft.Application.csproj",
-        "packagesPath": "C:\\Users\\z3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Application\\obj\\",
+        "projectPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Application\\ElenSoft.Application.csproj",
+        "packagesPath": "C:\\Users\\rmyt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\z3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rmyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,11 +34,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj": {
-                "projectPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj"
+              "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj": {
+                "projectPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj"
               },
-              "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj": {
-                "projectPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj"
+              "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj": {
+                "projectPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj"
               }
             }
           }
@@ -117,31 +119,30 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj": {
+    "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj",
         "projectName": "ElenSoft.DataLayer",
-        "projectPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj",
-        "packagesPath": "C:\\Users\\z3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.DataLayer\\obj\\",
+        "projectPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.DataLayer\\ElenSoft.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\rmyt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\z3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rmyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -234,31 +235,30 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj": {
+    "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj",
+        "projectUniqueName": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj",
         "projectName": "ElenSoft.Insfrastrcture",
-        "projectPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj",
-        "packagesPath": "C:\\Users\\z3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\obj\\",
+        "projectPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj",
+        "packagesPath": "C:\\Users\\rmyt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\z3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rmyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -351,14 +351,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

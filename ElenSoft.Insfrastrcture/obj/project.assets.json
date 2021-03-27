@@ -7592,23 +7592,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\z3\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\rmyt\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj",
+      "projectUniqueName": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj",
       "projectName": "ElenSoft.Insfrastrcture",
-      "projectPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj",
-      "packagesPath": "C:\\Users\\z3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\z3\\source\\repos\\ASP\\ElenSoft\\ElenSoft.Insfrastrcture\\obj\\",
+      "projectPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\ElenSoft.Insfrastrcture.csproj",
+      "packagesPath": "C:\\Users\\rmyt\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rmyt\\Desktop\\project\\ASP.netCore\\ElenSoft\\ElenSoft\\ElenSoft.Insfrastrcture\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\z3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rmyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -7701,14 +7704,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

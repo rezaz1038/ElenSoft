@@ -5,9 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers - Copy\**" />
     <Compile Remove="Cvf\**" />
+    <Content Remove="Controllers - Copy\**" />
     <Content Remove="Cvf\**" />
+    <EmbeddedResource Remove="Controllers - Copy\**" />
     <EmbeddedResource Remove="Cvf\**" />
+    <None Remove="Controllers - Copy\**" />
     <None Remove="Cvf\**" />
   </ItemGroup>
 
@@ -37,11 +41,6 @@
 		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.0.1" />
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.0.1" />
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.0.1" />
-	</ItemGroup>
-
-
-	<ItemGroup>
-	  <Folder Include="Controllers - Copy\" />
 	</ItemGroup>
 
 

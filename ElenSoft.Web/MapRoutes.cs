@@ -8,7 +8,8 @@ namespace ElenSoft.Web
     public static class MapRoutes
     {
 
-        private const string BaseUrl = "api" + "/" + "v{version:apiVersion}";
+        // private const string BaseUrl = "api" + "/" + "v{version:apiVersion}";
+        private const string BaseUrl = "api" + "/" + "v1";
 
         public static class Category
         {

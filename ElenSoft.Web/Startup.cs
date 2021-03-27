@@ -54,6 +54,7 @@ namespace ElenSoft.Web
             #region IReopsitory Service
 
             services.AddTransient<ICategory, CategoryService>();
+            services.AddTransient<IFileService, FileService>();
             //services.AddTransient<IUserService, UserService>();
             //services.AddTransient<IRoleService, RoleService>();
 

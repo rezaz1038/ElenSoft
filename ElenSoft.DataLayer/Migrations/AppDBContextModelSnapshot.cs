@@ -189,6 +189,182 @@ namespace ElenSoft.DataLayer.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.Device", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DeviceBrandId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("DeviceTypeId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("EquipmentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Model")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Serial")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DeviceBrandId");
+
+                    b.HasIndex("DeviceTypeId");
+
+                    b.HasIndex("EquipmentId");
+
+                    b.ToTable("Devices");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.DeviceBrand", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DeviceBrands");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.DeviceType", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DeviceTypes");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.Equipment", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Amval")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsInUse")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PlaceId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlaceId");
+
+                    b.ToTable("Equipment");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.EquipmentPlace", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EquipmentPlaces");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.FolderInfo", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OSName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Path")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Quota")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FolderInfos");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.FolderSecurity", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FolderInfoId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Permission")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Share")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FolderInfoId");
+
+                    b.ToTable("FolderSecurities");
+                });
+
             modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.Tage", b =>
                 {
                     b.Property<string>("Id")
@@ -339,6 +515,45 @@ namespace ElenSoft.DataLayer.Migrations
                     b.Navigation("Tage");
                 });
 
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.Device", b =>
+                {
+                    b.HasOne("ElenSoft.DataLayer.Models.Entities.DeviceBrand", "DeviceBrand")
+                        .WithMany("Devices")
+                        .HasForeignKey("DeviceBrandId");
+
+                    b.HasOne("ElenSoft.DataLayer.Models.Entities.DeviceType", "DeviceType")
+                        .WithMany("Devices")
+                        .HasForeignKey("DeviceTypeId");
+
+                    b.HasOne("ElenSoft.DataLayer.Models.Entities.Equipment", "Equipment")
+                        .WithMany("Devices")
+                        .HasForeignKey("EquipmentId");
+
+                    b.Navigation("DeviceBrand");
+
+                    b.Navigation("DeviceType");
+
+                    b.Navigation("Equipment");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.Equipment", b =>
+                {
+                    b.HasOne("ElenSoft.DataLayer.Models.Entities.EquipmentPlace", "Place")
+                        .WithMany("Equipment")
+                        .HasForeignKey("PlaceId");
+
+                    b.Navigation("Place");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.FolderSecurity", b =>
+                {
+                    b.HasOne("ElenSoft.DataLayer.Models.Entities.FolderInfo", "FolderInfo")
+                        .WithMany("FolderSecurities")
+                        .HasForeignKey("FolderInfoId");
+
+                    b.Navigation("FolderInfo");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("ElenSoft.DataLayer.Models.Entities.ApplicationRole", null)
@@ -388,6 +603,31 @@ namespace ElenSoft.DataLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.DeviceBrand", b =>
+                {
+                    b.Navigation("Devices");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.DeviceType", b =>
+                {
+                    b.Navigation("Devices");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.Equipment", b =>
+                {
+                    b.Navigation("Devices");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.EquipmentPlace", b =>
+                {
+                    b.Navigation("Equipment");
+                });
+
+            modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.FolderInfo", b =>
+                {
+                    b.Navigation("FolderSecurities");
                 });
 
             modelBuilder.Entity("ElenSoft.DataLayer.Models.Entities.Tage", b =>

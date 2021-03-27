@@ -69,9 +69,6 @@ namespace ElenSoft.Application.Repository.V1.Services
             {
                 Id = Guid.NewGuid().ToString(),
                 Title = request.Title,
-
-
-
                 CreatedAt = DateTime.Now
             };
             await _context.Categories.AddAsync(item);
@@ -167,10 +164,6 @@ namespace ElenSoft.Application.Repository.V1.Services
 
 
     }
-
-    
-
-      
 
     }
 
