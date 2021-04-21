@@ -13,18 +13,26 @@ namespace ElenSoft.Web
 
         public static class Category
         {
-            public const string List = BaseUrl + "/offish/category/list";
-            public const string Upsert = BaseUrl + "/offish/category/upsert";
-            public const string Delete = BaseUrl + "/offish/category/{request}";
-            public const string Single = BaseUrl + "/offish/category/{request}";
+            public const string List = BaseUrl + "/category/list";
+            public const string Upsert = BaseUrl + "/category/upsert";
+            public const string Delete = BaseUrl + "/category/{request}";
+            public const string Single = BaseUrl + "/category/{request}";
         }
 
-        public static class Department
+        public static class Tag
         {
-            public const string List = BaseUrl + "/department/list";
-            public const string Upsert = BaseUrl + "/department/upsert";
-            public const string Delete = BaseUrl + "/department/{request}";
-            public const string Single = BaseUrl + "/department/{request}";
+            public const string List = BaseUrl + "/tag/list";
+            public const string Upsert = BaseUrl + "/tag/upsert";
+            public const string Delete = BaseUrl + "/tag/{request}";
+            public const string Single = BaseUrl + "/tag/{request}";
+        }
+
+        public static class Archive
+        {
+            public const string List = BaseUrl + "/archive/list";
+            public const string Upsert = BaseUrl + "/archive/upsert";
+            public const string Delete = BaseUrl + "/archive/{request}";
+            public const string Single = BaseUrl + "/archive/{request}";
         }
 
         public static class PGM

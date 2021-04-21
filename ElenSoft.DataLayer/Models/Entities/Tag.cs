@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElenSoft.DataLayer.Models.Entities
 {
-    public class Tage: TEntity
+    public class Tag: TEntity
     {
         public string Title { get; set; }
 

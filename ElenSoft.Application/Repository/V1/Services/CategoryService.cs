@@ -1,7 +1,9 @@
 ﻿using ElenSoft.Application.Repository.V1.IService;
 using ElenSoft.Application.ViewModels;
+using ElenSoft.Application.ViewModels.Archive.Query;
 using ElenSoft.Application.ViewModels.Category.Cmd;
 using ElenSoft.Application.ViewModels.Category.Query;
+using ElenSoft.Application.ViewModels.Tag.Query;
 using ElenSoft.DataLayer.Models.Context;
 using ElenSoft.DataLayer.Models.Entities;
 using ElenSoft.Insfrastrcture;

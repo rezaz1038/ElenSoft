@@ -1,3 +1,4 @@
+using ElenSoft.Application.Profiles;
 using ElenSoft.Application.Repository.V1.IService;
 using ElenSoft.Application.Repository.V1.Services;
 using ElenSoft.DataLayer.Models.Context;
@@ -63,7 +64,7 @@ namespace ElenSoft.Web
 
 
             #region Automapper
-            //services.AddAutoMapper(typeof(EquipmentProfile));
+             services.AddAutoMapper(typeof(ArchiveProfile));
             //services.AddAutoMapper(typeof(IdentityProfile));
             #endregion
 
@@ -128,6 +129,12 @@ namespace ElenSoft.Web
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseCors(x =>
+                {
+                    x.AllowAnyHeader();
+                    x.AllowAnyOrigin();
+                    x.AllowAnyMethod();
+                });
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {

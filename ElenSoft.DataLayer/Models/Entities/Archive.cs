@@ -9,11 +9,11 @@ namespace ElenSoft.DataLayer.Models.Entities
    public class Archive:TEntity
     {
         public string Name { get; set; }
-        public string Descriptiion { get; set; }
+        public string Description { get; set; }
         public string Filesize { get; set; }
         public string Path { get; set; }
-        public Tage Tage { get; set; }
-        public string TageId { get; set; }
+        public Tag Tag { get; set; }
+        public string TagId { get; set; }
 
 
         public Category Category { get; set; }

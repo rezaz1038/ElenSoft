@@ -30,7 +30,7 @@ namespace ElenSoft.DataLayer.Models.Context
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Tage> Tages { get; set; }
+        public DbSet<Tag>  Tags { get; set; }
         public DbSet<Archive> Archives { get; set; }
 
         public DbSet<FolderInfo> FolderInfos { get; set; }

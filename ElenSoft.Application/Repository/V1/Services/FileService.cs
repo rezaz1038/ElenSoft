@@ -49,7 +49,7 @@ namespace ElenSoft.Application.Repository.V1.Services
             archive.CreatedAt = DateTime.Now;
             archive.Category = category;
             archive.Name = request.Title;
-            archive.Descriptiion = request.Description;
+            archive.Description = request.Description;
             archive.Path = directory;
             await _context.Archives.AddAsync(archive);
             await _context.SaveChangesAsync();

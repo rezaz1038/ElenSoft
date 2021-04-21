@@ -1,6 +1,8 @@
 ﻿using ElenSoft.Application.ViewModels;
+using ElenSoft.Application.ViewModels.Archive.Query;
 using ElenSoft.Application.ViewModels.Category.Cmd;
 using ElenSoft.Application.ViewModels.Category.Query;
+using ElenSoft.Application.ViewModels.Tag.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
