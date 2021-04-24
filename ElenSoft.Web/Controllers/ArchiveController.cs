@@ -54,7 +54,7 @@ namespace ElenSoft.Web.Controllers
         #endregion
 
         #region delete
-        [HttpDelete(MapRoutes.Category.Delete)]
+        [HttpDelete(MapRoutes.Archive.Delete)]
         public async Task<ActionResult> Delete([FromRoute] string request)
         {
             try
@@ -86,7 +86,7 @@ namespace ElenSoft.Web.Controllers
         #region list
 
         [HttpGet]
-        [Route(MapRoutes.Category.List)]
+        [Route(MapRoutes.Archive.List)]
         public async Task<IActionResult> List ([FromQuery] ArchivesQuery request)
         {
             try

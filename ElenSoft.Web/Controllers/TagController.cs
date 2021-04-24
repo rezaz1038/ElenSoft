@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ElenSoft.Web.Controllers
 {
-    [Route("api/[controller]")]
+     
     [ApiController]
     public class TagController : ControllerBase
     {
