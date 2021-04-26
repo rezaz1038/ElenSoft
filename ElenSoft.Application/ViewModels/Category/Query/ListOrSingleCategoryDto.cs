@@ -22,7 +22,9 @@ namespace ElenSoft.Application.ViewModels.Category.Query
         [JsonProperty("title")]
         public string Title { get; set; }
 
- 
+        [JsonProperty("createdAt")]
+        public DateTime CreatedAt { get; set; }
+
     }
 }
 

@@ -101,6 +101,7 @@ namespace ElenSoft.Application.Repository.V1.Services
         {
             Id = item.Id,
             Title = item.Title,
+            CreatedAt=item.CreatedAt
 
 
         };
