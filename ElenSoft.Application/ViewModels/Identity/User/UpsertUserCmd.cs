@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElenSoft.Application.ViewModels.Identity.User.Cmd
+namespace ElenSoft.Application.ViewModels.Identity.User
 {
     public class UpsertUserCmd
     {
         [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonProperty("username")]
+        [JsonProperty("userName")]
         public string UserName { get; set; }
 
         [JsonProperty("password")]
@@ -24,17 +24,14 @@ namespace ElenSoft.Application.ViewModels.Identity.User.Cmd
         [JsonProperty("lastName")]
         public string LastName { get; set; }
 
-        [JsonProperty("code")]
-        public string Code { get; set; }
 
-        [JsonProperty("claims")]
-        public List<string> Claims { get; set; }
+        //[JsonProperty("claims")]
+        //public List<string> Claims { get; set; }
 
-        [JsonProperty("roles")]
-        public List<string> Roles { get; set; }
+        //[JsonProperty("roles")]
+        //public List<string> Roles { get; set; }
 
-        [JsonProperty("departmentId")]
-        public string DepartmentId { get; set; }
+
     }
 
 }

@@ -1,7 +1,7 @@
 ﻿
 using AutoMapper;
-using ElenSoft.Application.ViewModels.Identity.User.Cmd;
-using ElenSoft.Application.ViewModels.Identity.User.Query;
+using ElenSoft.Application.ViewModels.Identity.User;
+ 
 using ElenSoft.DataLayer.Models.Entities;
 
 using System;
@@ -16,7 +16,7 @@ namespace ElenSoft.Application.Profiles
     {
         public IdentityProfile()
         {
-            CreateMap<UpsertUserCmd, ApplicationUser>();
+             CreateMap<UpsertUserCmd, ApplicationUser>();
 
             CreateMap<ApplicationUser, UserDto>();
             // .ForMember(dest => dest.Id, opt => opt.Ignore());

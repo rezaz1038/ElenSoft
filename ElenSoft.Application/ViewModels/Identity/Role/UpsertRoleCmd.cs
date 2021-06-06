@@ -1,16 +1,16 @@
 ﻿using Newtonsoft.Json;
-using SoftIran.Application.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElenSoft.Application.ViewModels.Identity.Role.Query
+namespace ElenSoft.Application.ViewModels.Identity.Role
 {
-    public class RolesQuery : BasedFilter
+    public class UpsertRoleCmd
     {
-
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }

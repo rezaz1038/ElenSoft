@@ -47,23 +47,32 @@ namespace ElenSoft.Web
 
         public static class Role
         {
+            public const string ListAll = BaseUrl + "/identity/role/list/all";
             public const string List = BaseUrl + "/identity/role/list";
             public const string Upsert = BaseUrl + "/identity/role/upsert";
             public const string Delete = BaseUrl + "/identity/role/{request}";
             public const string Single = BaseUrl + "/identity/role/{request}";
 
+
         }
 
         public static class User
         {
+            public const string Register = BaseUrl + "/identity/user/register";
+            public const string SetLevel = BaseUrl + "/identity/user/levelup";
+            public const string GetCliams = BaseUrl + "/identity/user/claim/list";
+
             public const string List = BaseUrl + "/identity/user/list";
             public const string Upsert = BaseUrl + "/identity/user/upsert";
             public const string Delete = BaseUrl + "/identity/user/{request}";
             public const string Single = BaseUrl + "/identity/user/{request}";
+            public const string SingleModel = BaseUrl + "/identity/user/model/{request}";
+            public const string UploadAvatar = BaseUrl + "/identity/user/avatar";
 
             public const string Login = BaseUrl + "/identity/user/login";
             public const string ResetPassword = BaseUrl + "/identity/user/password/reset";
             public const string ChangePassword = BaseUrl + "/identity/user/password/change";
+
 
         }
 

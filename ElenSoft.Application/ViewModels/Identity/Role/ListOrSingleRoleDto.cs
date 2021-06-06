@@ -1,14 +1,18 @@
-﻿using ElenSoft.Application.ViewModels;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElenSoft.Application.ViewModels.Identity.Role.Query
+namespace ElenSoft.Application.ViewModels.Identity.Role
 {
     public class RolesDto : Pagenated
+    {
+        public ICollection<RoleDto> Dtos { get; set; }
+    }
+
+    public class RolesDtoWithoutPagenated
     {
         public ICollection<RoleDto> Dtos { get; set; }
     }

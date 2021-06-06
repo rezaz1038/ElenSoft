@@ -2,16 +2,21 @@ using ElenSoft.Application.Profiles;
 using ElenSoft.Application.Repository.V1.IService;
 using ElenSoft.Application.Repository.V1.Services;
 using ElenSoft.DataLayer.Models.Context;
+using ElenSoft.DataLayer.Models.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ElenSoft.Web
@@ -39,27 +44,30 @@ namespace ElenSoft.Web
 
             #region identity
 
-            //services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
-            //{
-            //    options.Password.RequireDigit = true;
-            //    options.Password.RequiredLength = 5;
-            //    options.Password.RequireLowercase = true;
-            //    options.Password.RequireUppercase = false;
-            //    options.Password.RequireNonAlphanumeric = false;
-            //}).AddEntityFrameworkStores<AppDBContext>()
-            //   .AddDefaultTokenProviders();
+            services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 3;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
 
+                options.User.RequireUniqueEmail = true;
+                //  options.SignIn.RequireConfirmedEmail = true;
+
+            }).AddEntityFrameworkStores<AppDBContext>()
+                          .AddDefaultTokenProviders();
             #endregion
 
 
             #region IReopsitory Service
-
+            //services.AddScoped<IJWTTokenGenerator, JWTTokenGenerator>();
             services.AddTransient<ICategory, CategoryService>();
             services.AddTransient<ITag, TagService>();
             services.AddTransient<IArchive, ArchiveService>();
             services.AddTransient<IFileService, FileService>();
-            //services.AddTransient<IUserService, UserService>();
-            //services.AddTransient<IRoleService, RoleService>();
+             services.AddTransient<IUserService, UserService>();
+             services.AddTransient<IRoleService, RoleService>();
 
 
             #endregion
@@ -67,29 +75,32 @@ namespace ElenSoft.Web
 
             #region Automapper
              services.AddAutoMapper(typeof(ArchiveProfile));
-            //services.AddAutoMapper(typeof(IdentityProfile));
+             services.AddAutoMapper(typeof(IdentityProfile));
             #endregion
 
             #region Autentication
-            //var TokenValidationParameters = new TokenValidationParameters
-            //{
-            //    ValidateIssuer = false,
-            //    ValidateAudience = false,
-            //    // ValidAudience = "",
-            //    // ValidIssuer = "",
-            //    RequireExpirationTime = false,
-            //    ValidateLifetime = true,
-            //    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"])),
-            //    ValidateIssuerSigningKey = true
-            //};
+            var TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                // ValidAudience = "",
+                // ValidIssuer = "",
+                RequireExpirationTime = false,
+                ValidateLifetime = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"])),
+                ValidateIssuerSigningKey = true
+            };
 
-            //services.addsingleton(tokenvalidationparameters);
+            services.AddSingleton(TokenValidationParameters);
 
-            //services.addauthentication(auth =>
-            //{
-            //    auth.defaultauthenticatescheme = jwtbearerdefaults.authenticationscheme;
-            //    auth.defaultchallengescheme = jwtbearerdefaults.authenticationscheme;
-            //}).addjwtbearer(options => options.tokenvalidationparameters = tokenvalidationparameters);
+            services.AddAuthentication(auth =>
+            {
+                auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+
+            options.TokenValidationParameters = TokenValidationParameters
+            );
 
             #endregion
 

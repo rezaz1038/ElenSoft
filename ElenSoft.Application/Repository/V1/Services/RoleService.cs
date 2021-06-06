@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
 using ElenSoft.Application.Repository.V1.IService;
 using ElenSoft.Application.ViewModels;
-using ElenSoft.Application.ViewModels.Identity.Role.Cmd;
-using ElenSoft.Application.ViewModels.Identity.Role.Query;
+using ElenSoft.Application.ViewModels.Identity.Role;
 using ElenSoft.DataLayer.Models.Context;
 using ElenSoft.DataLayer.Models.Entities;
 using ElenSoft.Insfrastrcture;
@@ -130,6 +129,8 @@ namespace ElenSoft.Application.Repository.V1.Services
 
             };
         }
+
+       
         #endregion
 
         #region upsert
@@ -178,6 +179,9 @@ namespace ElenSoft.Application.Repository.V1.Services
         }
         #endregion
 
-
+ public Task<Response<RolesDtoWithoutPagenated>> GetRolesAll(RolesQuery request)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

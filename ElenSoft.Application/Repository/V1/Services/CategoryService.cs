@@ -67,12 +67,13 @@ namespace ElenSoft.Application.Repository.V1.Services
         }
         else
         {
-            var item = new Category
-            {
-                Id = Guid.NewGuid().ToString(),
-                Title = request.Title,
-                CreatedAt = DateTime.Now
-            };
+                var item = new Category
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Title = request.Title,
+                     
+                    CreatedAt = DateTime.Now
+                };
             await _context.Categories.AddAsync(item);
         }
         await _context.SaveChangesAsync();
@@ -96,12 +97,12 @@ namespace ElenSoft.Application.Repository.V1.Services
             throw new BusinessLogicException("رکوردی یافت نشد");
         }
 
-        var result = new CategoryDto
+            var result = new CategoryDto
 
-        {
-            Id = item.Id,
-            Title = item.Title,
-            CreatedAt=item.CreatedAt
+            {
+                Id = item.Id,
+                Title = item.Title,
+                CreatedAt = item.CreatedAt 
 
 
         };
@@ -149,7 +150,8 @@ namespace ElenSoft.Application.Repository.V1.Services
             Dtos = await finalResult.Select(d => new CategoryDto()
             {
                 Id = d.Id,
-                Title = d.Title
+                Title = d.Title,
+                CreatedAt=d.CreatedAt
             }).ToListAsync(),
             PageId = request.PageId,
             PageSize = request.PageSize,

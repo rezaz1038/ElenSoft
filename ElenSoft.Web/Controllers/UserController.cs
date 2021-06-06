@@ -1,21 +1,22 @@
 ﻿using ElenSoft.Application.Repository.V1.IService;
 using ElenSoft.Application.ViewModels;
-using ElenSoft.Application.ViewModels.Identity.User.Cmd;
-using ElenSoft.Application.ViewModels.Identity.User.Query;
+using ElenSoft.Application.ViewModels.Identity.User;
 using ElenSoft.Insfrastrcture;
 using ElenSoft.Web;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+ 
 
 namespace SoftIran.Web.Controllers
 {
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [ApiVersion("1.0")]
     [ApiExplorerSettings(GroupName = "v1")]
     [ApiController]
@@ -31,6 +32,8 @@ namespace SoftIran.Web.Controllers
 
         [HttpGet]
         [Route(MapRoutes.User.List)]
+        [ProducesResponseType(typeof(Response<UsersDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> ListUsers([FromQuery] UsersQuery request)
         {
             try
@@ -52,7 +55,7 @@ namespace SoftIran.Web.Controllers
                 return BadRequest(new Response
                 {
                     Status = false,
-                    Message = ErrorMessages.UnkownError
+                    Message = e.Message
                 });
             }
 
@@ -66,6 +69,8 @@ namespace SoftIran.Web.Controllers
         #region upsert
         [HttpPost]
         [Route(MapRoutes.User.Upsert)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpsertUser([FromBody] UpsertUserCmd request)
         {
             try
@@ -88,7 +93,7 @@ namespace SoftIran.Web.Controllers
                 return BadRequest(new Response
                 {
                     Status = false,
-                    Message = ErrorMessages.UnkownError
+                    Message = e.Message
                      //e.Message 
                 }); 
             }
@@ -97,6 +102,8 @@ namespace SoftIran.Web.Controllers
 
         #region delete
         [HttpDelete(MapRoutes.User.Delete)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> DeleteUser([FromRoute] string request)
         {
             try
@@ -128,6 +135,8 @@ namespace SoftIran.Web.Controllers
         #region get  single
         [HttpGet]
         [Route(MapRoutes.User.Single)]
+        [ProducesResponseType(typeof(Response<UserDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> SingleUser([FromRoute] string request)
         {
             try
@@ -155,17 +164,22 @@ namespace SoftIran.Web.Controllers
 
 
         }
+
+ 
         #endregion
 
 
         #region login
+        
         [AllowAnonymous]
         [HttpPost]
         [Route(MapRoutes.User.Login)]
+        [ProducesResponseType(typeof(Response<AuthenticationToken>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Login ([FromBody] LoginCmd request) 
         {
             try
-            {
+            { 
                 var result = await _service.LoginUser(request);
                 return Ok(result);
 
@@ -191,15 +205,18 @@ namespace SoftIran.Web.Controllers
         }
         #endregion
 
-
-        #region reset password
+        
+        #region register
+        [AllowAnonymous]
         [HttpPost]
-        [Route(MapRoutes.User.ResetPassword)]
-        public async Task<IActionResult> ResetPasswordUser([FromBody] ResetPasswordCmd request)
+        [Route(MapRoutes.User.Register)]
+        [ProducesResponseType(typeof(Response<AuthenticationToken>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Register([FromBody] RegisterCmd request)
         {
             try
             {
-                var result = await _service.ResetPassword(request);
+                var result = await _service.RegisterUser(request);
                 return Ok(result);
 
             }
@@ -224,14 +241,17 @@ namespace SoftIran.Web.Controllers
         }
         #endregion
 
-        #region change password
+        #region set level
+        [AllowAnonymous]
         [HttpPost]
-        [Route(MapRoutes.User.ChangePassword)]
-        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordCmd request)
+        [Route(MapRoutes.User.SetLevel)]
+        [ProducesResponseType(typeof(Response<AuthenticationToken>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult>  LevelUp([FromBody] LevelUpCmd request)
         {
             try
             {
-                var result = await _service.ChangePassword(request);
+                var result = await _service.LevelUpUser(request);
                 return Ok(result);
 
             }
@@ -255,6 +275,142 @@ namespace SoftIran.Web.Controllers
             }
         }
         #endregion
+
+
+        #region gets cliams value
+        [AllowAnonymous]
+        [HttpGet]
+        [Route(MapRoutes.User.GetCliams)]
+        [ProducesResponseType(typeof(Response<AuthenticationToken>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetCliams()
+        {
+            try
+            {
+                var result = await _service.GetClaims();
+                return Ok(result);
+            }
+            catch (BusinessLogicException ex)
+            {
+                return BadRequest(new Response
+                {
+                    Status = false,
+                    Message = ex.Message
+                });
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new Response
+                {
+                    Status = false,
+                    Message = e.Message
+                });
+            }
+        }
+        #endregion
+
+        //#region reset password
+        //[HttpPost]
+        //[Route(MapRoutes.User.ResetPassword)]
+        //[ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
+        //[ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
+        //public async Task<IActionResult> ResetPasswordUser([FromBody] ResetPasswordCmd request)
+        //{
+        //    try
+        //    {
+        //        var result = await _service.ResetPassword(request);
+        //        return Ok(result);
+
+        //    }
+        //    catch (BusinessLogicException ex)
+        //    {
+        //        return BadRequest(new Response
+        //        {
+        //            Status = false,
+        //            Message = ex.Message
+        //        });
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return BadRequest(new Response
+        //        {
+        //            Status = false,
+        //            Message = ErrorMessages.UnkownError
+        //            //e.Message 
+        //        });
+        //    }
+        //}
+        //#endregion
+
+        //#region change password
+        //[HttpPost]
+        //[Route(MapRoutes.User.ChangePassword)]
+        //[ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
+        //[ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
+        //public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordCmd request)
+        //{
+        //    try
+        //    {
+        //        var result = await _service.ChangePassword(request);
+        //        return Ok(result);
+
+        //    }
+        //    catch (BusinessLogicException ex)
+        //    {
+        //        return BadRequest(new Response
+        //        {
+        //            Status = false,
+        //            Message = ex.Message
+        //        });
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return BadRequest(new Response
+        //        {
+        //            Status = false,
+        //            Message = ErrorMessages.UnkownError
+        //            //e.Message 
+        //        });
+        //    }
+        //}
+        //#endregion
+
+        //#region uploadAvatar
+        // [HttpPost]
+        // [Route(MapRoutes.User.UploadAvatar)]
+        //[ProducesResponseType(typeof(Response<UploadAvatarUserDto>), StatusCodes.Status200OK)]
+        //[ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
+        //public async Task<IActionResult> UploadAvatar( IFormFile request)
+        //{
+        //    try
+        //    {
+        //        var result = await _service.UploadAvatar(request);
+        //        return Ok(result);
+
+        //    }
+        //    catch (BusinessLogicException ex)
+        //    {
+        //        return BadRequest(new Response
+        //        {
+        //            Status = false,
+        //            Message = ex.Message
+        //        });
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return BadRequest(new Response
+        //        {
+        //            Status = false,
+        //            Message = ErrorMessages.UnkownError
+        //            //e.Message 
+        //        });
+        //    }
+        //}
+        //#endregion
 
     }
 }
