@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ElenSoft.DataLayer.Migrations
 {
-    public partial class f : Migration
+    public partial class fg : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -64,7 +64,7 @@ namespace ElenSoft.DataLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tages",
+                name: "DeviceBrands",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -73,7 +73,62 @@ namespace ElenSoft.DataLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tages", x => x.Id);
+                    table.PrimaryKey("PK_DeviceBrands", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DeviceTypes",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DeviceTypes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EquipmentPlaces",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EquipmentPlaces", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FolderInfos",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Path = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Quota = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OSName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FolderInfos", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Tags",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tags", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -207,15 +262,61 @@ namespace ElenSoft.DataLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Equipment",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Amval = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsInUse = table.Column<bool>(type: "bit", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PlaceId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Equipment", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Equipment_EquipmentPlaces_PlaceId",
+                        column: x => x.PlaceId,
+                        principalTable: "EquipmentPlaces",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FolderSecurities",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Share = table.Column<int>(type: "int", nullable: false),
+                    Permission = table.Column<int>(type: "int", nullable: false),
+                    FolderInfoId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FolderSecurities", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FolderSecurities_FolderInfos_FolderInfoId",
+                        column: x => x.FolderInfoId,
+                        principalTable: "FolderInfos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Archives",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Descriptiion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Filesize = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Path = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TageId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    TagId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     CategoryId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -229,9 +330,47 @@ namespace ElenSoft.DataLayer.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Archives_Tages_TageId",
-                        column: x => x.TageId,
-                        principalTable: "Tages",
+                        name: "FK_Archives_Tags_TagId",
+                        column: x => x.TagId,
+                        principalTable: "Tags",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Devices",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Model = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Serial = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EquipmentId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    DeviceBrandId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    DeviceTypeId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Devices", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Devices_DeviceBrands_DeviceBrandId",
+                        column: x => x.DeviceBrandId,
+                        principalTable: "DeviceBrands",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Devices_DeviceTypes_DeviceTypeId",
+                        column: x => x.DeviceTypeId,
+                        principalTable: "DeviceTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Devices_Equipment_EquipmentId",
+                        column: x => x.EquipmentId,
+                        principalTable: "Equipment",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -247,9 +386,9 @@ namespace ElenSoft.DataLayer.Migrations
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Archives_TageId",
+                name: "IX_Archives_TagId",
                 table: "Archives",
-                column: "TageId");
+                column: "TagId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -289,6 +428,31 @@ namespace ElenSoft.DataLayer.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Devices_DeviceBrandId",
+                table: "Devices",
+                column: "DeviceBrandId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Devices_DeviceTypeId",
+                table: "Devices",
+                column: "DeviceTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Devices_EquipmentId",
+                table: "Devices",
+                column: "EquipmentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Equipment_PlaceId",
+                table: "Equipment",
+                column: "PlaceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FolderSecurities_FolderInfoId",
+                table: "FolderSecurities",
+                column: "FolderInfoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -315,16 +479,37 @@ namespace ElenSoft.DataLayer.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Devices");
+
+            migrationBuilder.DropTable(
+                name: "FolderSecurities");
+
+            migrationBuilder.DropTable(
                 name: "Categories");
 
             migrationBuilder.DropTable(
-                name: "Tages");
+                name: "Tags");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "DeviceBrands");
+
+            migrationBuilder.DropTable(
+                name: "DeviceTypes");
+
+            migrationBuilder.DropTable(
+                name: "Equipment");
+
+            migrationBuilder.DropTable(
+                name: "FolderInfos");
+
+            migrationBuilder.DropTable(
+                name: "EquipmentPlaces");
         }
     }
 }

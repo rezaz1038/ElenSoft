@@ -57,7 +57,9 @@ namespace ElenSoft.Web.Controllers
         #endregion
 
         #region delete
-        [HttpDelete(MapRoutes.Category.Delete)]
+        [HttpDelete(MapRoutes.Category.Delete)]  
+        [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> Delete([FromRoute] string request)
         {
             try

@@ -73,3 +73,17 @@ C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.D
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ref\ElenSoft.DataLayer.dll
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.pdb
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.genruntimeconfig.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.deps.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.runtimeconfig.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.runtimeconfig.dev.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ref\ElenSoft.DataLayer.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\bin\Debug\net5.0\ElenSoft.DataLayer.pdb
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.AssemblyInfoInputs.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.AssemblyInfo.cs
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ref\ElenSoft.DataLayer.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.pdb
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.DataLayer\obj\Debug\net5.0\ElenSoft.DataLayer.genruntimeconfig.cache

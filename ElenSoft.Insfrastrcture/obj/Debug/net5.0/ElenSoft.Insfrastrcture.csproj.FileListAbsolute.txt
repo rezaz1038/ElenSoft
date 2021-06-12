@@ -73,3 +73,18 @@ C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenS
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ref\ElenSoft.Insfrastrcture.dll
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.pdb
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.genruntimeconfig.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\bin\Debug\net5.0\ElenSoft.Insfrastrcture.deps.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\bin\Debug\net5.0\ElenSoft.Insfrastrcture.runtimeconfig.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\bin\Debug\net5.0\ElenSoft.Insfrastrcture.runtimeconfig.dev.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\bin\Debug\net5.0\ElenSoft.Insfrastrcture.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\bin\Debug\net5.0\ref\ElenSoft.Insfrastrcture.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\bin\Debug\net5.0\ElenSoft.Insfrastrcture.pdb
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.csproj.AssemblyReference.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.AssemblyInfoInputs.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.AssemblyInfo.cs
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.csproj.CoreCompileInputs.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ref\ElenSoft.Insfrastrcture.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.pdb
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Insfrastrcture\obj\Debug\net5.0\ElenSoft.Insfrastrcture.genruntimeconfig.cache

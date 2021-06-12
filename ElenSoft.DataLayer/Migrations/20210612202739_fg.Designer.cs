@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElenSoft.DataLayer.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20210603155303_dfs")]
-    partial class dfs
+    [Migration("20210612202739_fg")]
+    partial class fg
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

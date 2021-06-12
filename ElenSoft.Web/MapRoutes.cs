@@ -107,21 +107,7 @@ namespace ElenSoft.Web
         }
 
  
-        public static class Offish
-        {
-
-           
-
-            public static class Upsert
-            {
-                public const string register = BaseUrl + "/offish/upsert/register";
-                public const string Upshert = BaseUrl + "/offish/category/upsert";
-                public const string Delete = BaseUrl + "/offish/category/{request}";
-                public const string Single = BaseUrl + "/offish/category/{request}";
-            }
-
-
-        }
+       
 
     }
 }

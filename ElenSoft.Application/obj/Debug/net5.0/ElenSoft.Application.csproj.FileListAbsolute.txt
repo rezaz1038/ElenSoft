@@ -98,3 +98,23 @@ C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ref\ElenSoft.Application.dll
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.pdb
 C:\Users\z3\Desktop\soft\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.genruntimeconfig.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.Application.deps.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.Application.runtimeconfig.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.Application.runtimeconfig.dev.json
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.Application.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ref\ElenSoft.Application.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.Application.pdb
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.DataLayer.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.Insfrastrcture.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.DataLayer.pdb
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\bin\Debug\net5.0\ElenSoft.Insfrastrcture.pdb
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.csproj.AssemblyReference.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.AssemblyInfoInputs.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.AssemblyInfo.cs
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.csproj.CoreCompileInputs.cache
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.csproj.CopyComplete
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ref\ElenSoft.Application.dll
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.pdb
+C:\Users\rmyt\Desktop\soft site\ElenSoft\ElenSoft.Application\obj\Debug\net5.0\ElenSoft.Application.genruntimeconfig.cache

@@ -50,4 +50,10 @@
 	</ItemGroup>
 
 
+	<ItemGroup>
+	  <Folder Include="StaticFiles\" />
+	  <Folder Include="wwwroot\Image\" />
+	</ItemGroup>
+
+
 </Project>

@@ -7,6 +7,7 @@ using ElenSoft.Application.Repository.V1.IService;
 using ElenSoft.Application.ViewModels;
 using ElenSoft.DataLayer.Models.Context;
 using ElenSoft.DataLayer.Models.Entities;
+using ElenSoft.Insfrastrcture;
 using Microsoft.EntityFrameworkCore;
 
 namespace ElenSoft.Application.Repository.V1.Services
@@ -14,7 +15,8 @@ namespace ElenSoft.Application.Repository.V1.Services
     public class FileService : IFileService
     {
         private readonly AppDBContext _context;
-        private const string _server = @"\\192.168.121.15\d$\software";
+        //private const string _server = @"\\192.168.121.15\d$\software";
+        private const string _server = @"d:\\Asoft";
 
         public FileService(AppDBContext context)
         {
@@ -24,23 +26,28 @@ namespace ElenSoft.Application.Repository.V1.Services
         public async Task<Response> Upload(UploadFileCommand request)
         {
             var category = await _context.Categories.FirstOrDefaultAsync(x => x.Id == request.CategoryId);
+            
+            if (request.CategoryId==null )
+            {
+                throw new BusinessLogicException("گروه آرشیوی معتبری  یافت نشد ");
+            }
+
             var directory = GetUploadDirectory(category.Title, request.Title);
+       
             var uploadPath = Path.Combine(_server, directory);
 
             var archive = new Archive();
-
 
             if (!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
             }
 
-
             foreach (var file in request.Files)
             {
                 await using var fileStream =
                     new FileStream(Path.Combine(uploadPath, file.FileName), FileMode.Create, FileAccess.Write);
-                
+       
                 file.CopyTo(fileStream);
                 fileStream.Flush();
             }
@@ -54,10 +61,11 @@ namespace ElenSoft.Application.Repository.V1.Services
             await _context.Archives.AddAsync(archive);
             await _context.SaveChangesAsync();
 
-            return new Response()
+            return new Response
             {
                 Status = true,
-                Message = ""
+                Message = "success"
+
             };
         }
 

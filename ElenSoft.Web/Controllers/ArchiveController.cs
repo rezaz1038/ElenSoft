@@ -12,7 +12,10 @@ using System.Threading.Tasks;
 
 namespace ElenSoft.Web.Controllers
 {
-    [Route("api/[controller]")]
+
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [ApiVersion("1.0")]
+    [ApiExplorerSettings(GroupName = "v1")]
     [ApiController]
     public class ArchiveController : ControllerBase
     {
