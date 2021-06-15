@@ -21,6 +21,8 @@ namespace ElenSoft.Application.ViewModels.Tag.Query
         [JsonProperty("title")]
         public string Title { get; set; }
 
+        [JsonProperty("createdAt")]
+        public DateTime CreatedAt { get; set; }
 
     }
 }
